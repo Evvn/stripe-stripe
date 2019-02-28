@@ -65,4 +65,8 @@ button, button:focus {
   color: #212121;
 }
 
+label {
+  display: block;
+}
+
 /*# sourceMappingURL=App.css.map */

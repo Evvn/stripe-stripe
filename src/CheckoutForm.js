@@ -20,7 +20,7 @@ class CheckoutForm extends React.Component {
         </label>
 
         <label>
-          Payment Request
+          Payment Request (if available)
           <PaymentRequestForm />
         </label>
 
