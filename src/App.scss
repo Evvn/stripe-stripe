@@ -19,7 +19,11 @@ h1 {
 
 h1:nth-of-type(even) {
   color: #212121;
-  text-shadow: -1px -1px 0 #2216af, 1px -1px 0 #2216af, -1px 1px 0 #2216af, 1px 1px 0 #2216af;
+  text-shadow:
+   -1px -1px 0 #2216af,
+    1px -1px 0 #2216af,
+    -1px 1px 0 #2216af,
+     1px 1px 0 #2216af;
 }
 
 h3 {
@@ -39,19 +43,21 @@ input::placeholder, ::-webkit-input-placeholder {
 
 form {
   color: inherit;
-}
-form div, form label {
-  margin: 20px 0;
-}
-form div {
-  background-color: #dfdfdf;
-  border: none;
-  outline: none;
-  font-size: 70%;
-  font-family: inherit;
-  width: auto;
-  padding: 10px 20px;
-  margin: 20px 0;
+
+  div, label {
+    margin: 20px 0;
+  }
+
+  div {
+    background-color: #dfdfdf;
+    border: none;
+    outline: none;
+    font-size: 70%;
+    font-family: inherit;
+    width: auto;
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
 }
 
 button, button:focus {
@@ -64,5 +70,3 @@ button, button:focus {
   padding: 10px 20px;
   color: #212121;
 }
-
-/*# sourceMappingURL=App.css.map */
