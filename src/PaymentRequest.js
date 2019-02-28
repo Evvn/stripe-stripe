@@ -46,7 +46,7 @@ class PaymentRequestForm extends React.Component {
           },
         }}
       />
-    ) : null;
+    ) : <span>No request button available</span>;
   }
 }
 
