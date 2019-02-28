@@ -25,7 +25,7 @@ export default class TakeMoney extends React.Component {
         token={this.onToken}
         currency="AUD"
         locale="en"
-        stripeKey="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+        stripeKey="pk_test_gtRdjjtoOFsZqEvtkSD4sVir"
         ComponentClass="div"
       />
     )
