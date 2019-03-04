@@ -1,7 +1,6 @@
 import React from 'react'
 import { injectStripe, CardElement } from 'react-stripe-elements'
 import PaymentRequestForm from './PaymentRequest.js'
-const stripe = require("stripe")("sk_test_PvFxZtS5rhJLoPfqZ6fjT4f6")
 
 class CheckoutForm extends React.Component {
   onSubmit = (ev) => {
