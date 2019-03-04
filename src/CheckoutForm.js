@@ -10,12 +10,13 @@ class CheckoutForm extends React.Component {
     this.props.stripe.createToken({name: 'Evan Evan'}).then(({token}) => {
 
       console.log('Received Stripe token:', token);
-      // charge 'token' with stripe
+      // use token to charge stripe
       (async () => {
+        // eslint-disable-next-line
         const charge = await stripe.charges.create({
-          amount: 131313,
+          amount: 1313,
           currency: 'aud',
-          description: 'Example chargeExample chargeExample chargeExample charge',
+          description: 'ExampleExampleExample charge',
           source: token,
         })
       })()
