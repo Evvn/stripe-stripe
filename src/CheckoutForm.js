@@ -1,6 +1,11 @@
 import React from 'react'
 import { injectStripe, CardElement } from 'react-stripe-elements'
 import PaymentRequestForm from './PaymentRequest.js'
+import axios from 'axios'
+import PAYMENT_SERVER_URL from './constants/server';
+
+//pk_test_gtRdjjtoOFsZqEvtkSD4sVir
+//sk_test_PvFxZtS5rhJLoPfqZ6fjT4f6
 
 class CheckoutForm extends React.Component {
   onSubmit = (ev) => {
@@ -10,15 +15,14 @@ class CheckoutForm extends React.Component {
 
       console.log('Received Stripe token:', token);
       // use token to charge stripe
-      (async () => {
-        // eslint-disable-next-line
-        const charge = await stripe.charges.create({
-          amount: 1313,
-          currency: 'aud',
-          description: 'ExampleExampleExample charge',
-          source: token,
-        })
-      })()
+      axios.post(PAYMENT_SERVER_URL,
+       {
+         source: token.id,
+         currency: 'aud',
+         amount: 1313
+       })
+       .then(console.log('success'))
+       .catch(console.log('fail'))
 
     })
   }
