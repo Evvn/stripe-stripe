@@ -11,6 +11,8 @@ class CheckoutForm extends React.Component {
   onSubmit = (ev) => {
     ev.preventDefault()
 
+    console.log(PAYMENT_SERVER_URL);
+
     this.props.stripe.createToken({name: 'Evan Evan'}).then(({token}) => {
 
       console.log('Received Stripe token:', token);
