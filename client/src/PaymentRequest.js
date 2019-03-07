@@ -11,8 +11,8 @@ class PaymentRequestForm extends React.Component {
       country: 'AU',
       currency: 'aud',
       total: {
-        label: 'Demo total',
-        amount: 1313,
+        label: document.querySelector('.desc').value,
+        amount: parseFloat(document.querySelector('.amount').value.replace('.',''))
       },
     });
 
