@@ -17,6 +17,12 @@ class PaymentRequestForm extends React.Component {
     });
 
     paymentRequest.on('token', ({complete, token, ...data}) => {
+      paymentRequest.update({
+        total: {
+          label: this.props.desc,
+          amount: this.props.amount,
+        }
+      })
       console.log('Received Stripe token: ', token);
       console.log('Received customer information: ', data);
       complete('success');
@@ -32,19 +38,9 @@ class PaymentRequestForm extends React.Component {
     };
   }
 
-  update = () => {
-    this.state.paymentRequest.update({
-      total: {
-        amount: this.props.amount,
-        label: this.props.desc
-      }
-    })
-  }
-
   render() {
     return this.state.canMakePayment ? (
       <PaymentRequestButtonElement
-        onClick={ this.update }
         paymentRequest={this.state.paymentRequest}
         className="PaymentRequestButton"
         style={{
