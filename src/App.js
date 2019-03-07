@@ -14,6 +14,7 @@ class App extends Component {
           <h1>Stripe</h1>
           <h1>Stripe</h1>
           <h1>Stripe</h1>
+          <h3 className="hidden">Payment success</h3>
 
           {/* <StripeBtn /> */}
 

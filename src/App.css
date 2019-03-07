@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   font-family: "Druk Text Wide", "Helvetica Display", sans-serif;
   background-color: #212121;
@@ -39,6 +43,17 @@ input::placeholder, ::-webkit-input-placeholder {
 
 form {
   color: inherit;
+}
+form input, form input:focus {
+  margin: 20px 0;
+  display: block;
+  font-size: 70%;
+  font-family: inherit;
+  padding: 10px 20px;
+  background-color: #dfdfdf;
+  color: #212121;
+  outline: none;
+  border: none;
 }
 form div, form label {
   margin: 20px 0;
