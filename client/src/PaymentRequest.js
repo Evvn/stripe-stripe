@@ -7,12 +7,12 @@ class PaymentRequestForm extends React.Component {
 
     // For full documentation of the available paymentRequest options, see:
     // https://stripe.com/docs/stripe.js#the-payment-request-object
-    const paymentRequest = props.stripe.paymentRequest({
+    let paymentRequest = props.stripe.paymentRequest({
       country: 'AU',
       currency: 'aud',
       total: {
-        label: document.querySelector('.desc').value,
-        amount: parseFloat(document.querySelector('.amount').value.replace('.',''))
+        label: this.props.desc,
+        amount: this.props.amount,
       },
     });
 
