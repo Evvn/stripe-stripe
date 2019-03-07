@@ -32,9 +32,19 @@ class PaymentRequestForm extends React.Component {
     };
   }
 
+  update = () => {
+    this.state.paymentRequest.update({
+      total: {
+        amount: this.props.amount,
+        label: this.props.desc
+      }
+    })
+  }
+
   render() {
     return this.state.canMakePayment ? (
       <PaymentRequestButtonElement
+        onClick={ this.update }
         paymentRequest={this.state.paymentRequest}
         className="PaymentRequestButton"
         style={{
