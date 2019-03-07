@@ -23,6 +23,10 @@ app.post("/charge", async (req, res) => {
   }
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
 // app.listen(1313, () => console.log("Listening on port 1313 :)"));
 const port = process.env.PORT || 1313;
 app.listen(port)
