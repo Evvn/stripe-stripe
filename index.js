@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, 'client/build')))
+
 app.post("/charge", async (req, res) => {
   try {
     let {status} = await stripe.charges.create({
@@ -21,4 +23,7 @@ app.post("/charge", async (req, res) => {
   }
 });
 
-app.listen(1313, () => console.log("Listening on port 1313 :)"));
+// app.listen(1313, () => console.log("Listening on port 1313 :)"));
+const port = process.env.PORT || 1313;
+app.listen(port)
+console.log(`Password generator listening on ${port}`);
