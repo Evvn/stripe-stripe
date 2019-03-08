@@ -11,8 +11,8 @@ class PaymentRequestForm extends React.Component {
       country: 'AU',
       currency: 'aud',
       total: {
-        label: this.props.desc,
-        amount: this.props.amount,
+        label: 'fail',
+        amount: 100,
       },
     });
 
