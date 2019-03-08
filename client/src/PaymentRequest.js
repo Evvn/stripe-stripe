@@ -16,13 +16,10 @@ class PaymentRequestForm extends React.Component {
       },
     });
 
+    console.log(this.props.amount)
+    console.log(this.props.desc)
+
     paymentRequest.on('token', ({complete, token, ...data}) => {
-      paymentRequest.update({
-        total: {
-          label: this.props.desc,
-          amount: this.props.amount,
-        }
-      })
       console.log('Received Stripe token: ', token);
       console.log('Received customer information: ', data);
       complete('success');
