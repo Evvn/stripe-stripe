@@ -31,7 +31,7 @@ class CheckoutForm extends React.Component {
     super(props)
 
     this.state = {
-      amount: 1.00,
+      amount: 100,
       desc: ''
     }
 
