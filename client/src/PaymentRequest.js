@@ -11,13 +11,10 @@ class PaymentRequestForm extends React.Component {
       country: 'AU',
       currency: 'aud',
       total: {
-        label: 'placeholder apple pay',
-        amount: 100,
+        label: this.props.desc,
+        amount: this.props.amount,
       },
     });
-
-    console.log(this.props.amount)
-    console.log(this.props.desc)
 
     paymentRequest.on('token', ({complete, token, ...data}) => {
       console.log('Received Stripe token: ', token);

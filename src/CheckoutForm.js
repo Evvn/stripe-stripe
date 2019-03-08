@@ -42,6 +42,9 @@ class CheckoutForm extends React.Component {
     this.setState({
       amount: parseFloat(document.querySelector('.amount').value.replace('.','')),
       desc: document.querySelector('.desc').value
+    }, () => {
+      console.log(this.state.amount);
+      console.log(this.state.desc);
     })
   }
 
