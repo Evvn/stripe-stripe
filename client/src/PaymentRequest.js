@@ -23,6 +23,9 @@ class PaymentRequestForm extends React.Component {
           amount: this.props.amount,
         }
       })
+      this.setState({
+        paymentRequest
+      })
     })
 
     paymentRequest.on('token', ({complete, token, ...data}) => {
