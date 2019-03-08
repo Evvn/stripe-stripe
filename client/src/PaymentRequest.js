@@ -16,6 +16,15 @@ class PaymentRequestForm extends React.Component {
       },
     });
 
+    paymentRequest.on('click', () => {
+      paymentRequest.update({
+        total: {
+          label: this.props.desc,
+          amount: this.props.amount,
+        }
+      })
+    })
+
     paymentRequest.on('token', ({complete, token, ...data}) => {
       console.log('Received Stripe token: ', token);
       console.log('Received customer information: ', data);
