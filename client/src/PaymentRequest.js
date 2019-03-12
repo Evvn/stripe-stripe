@@ -16,20 +16,12 @@ class PaymentRequestForm extends React.Component {
       },
     });
 
-    // paymentRequest.on('click', (e) => {
-    //   document.querySelector('body').classList.add('red')
-    //   e.updateWith({
-    //     total: {
-    //       label: this.props.desc,
-    //       amount: this.props.amount,
-    //     }
-    //   })
-    // })
-    paymentRequest.on('click', function(ev) {
-      paymentRequest.update({
+    paymentRequest.on('click', async (e) => {
+      document.querySelector('body').classList.add('red')
+      e.updateWith({
         total: {
           label: this.props.desc,
-          amount: this.props.amount
+          amount: this.props.amount,
         }
       })
     })
