@@ -42,11 +42,22 @@ class PaymentRequestForm extends React.Component {
     };
   }
 
+  onClick = () => {
+    document.querySelector('body').classList.add('red')
+    this.state.paymentRequest.update({
+      total: {
+        label: this.props.desc,
+        amount: this.props.amount,
+      }
+    })
+  }
+
   render() {
     return this.state.canMakePayment ? (
       <PaymentRequestButtonElement
         paymentRequest={this.state.paymentRequest}
         className="PaymentRequestButton"
+        click={ this.onClick }
         style={{
           // For more details on how to style the Payment Request Button, see:
           // https://stripe.com/docs/elements/payment-request-button#styling-the-element
