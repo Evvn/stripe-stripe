@@ -16,7 +16,7 @@ class PaymentRequestForm extends React.Component {
       },
     });
 
-    // paymentRequest.on('click', async (e) => {
+    // paymentRequest.on('click', (e) => {
     //   document.querySelector('body').classList.add('red')
     //   e.updateWith({
     //     total: {
