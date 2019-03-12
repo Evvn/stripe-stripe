@@ -11,14 +11,14 @@ class PaymentRequestForm extends React.Component {
       country: 'AU',
       currency: 'aud',
       total: {
-        label: this.props.desc,
-        amount: this.props.amount,
+        label: 'fail',
+        amount: 100,
       },
     });
 
-    paymentRequest.on('click', () => {
+    paymentRequest.on('click', (e) => {
       document.querySelector('body').classList.add('red')
-      paymentRequest.update({
+      e.updateWith({
         total: {
           label: this.props.desc,
           amount: this.props.amount,
