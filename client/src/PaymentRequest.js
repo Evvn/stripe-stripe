@@ -45,12 +45,12 @@ class PaymentRequestForm extends React.Component {
   onClick = (e) => {
     e.preventDefault()
     document.querySelector('body').classList.add('red')
-    this.state.paymentRequest.update({
-      total: {
+    this.state.paymentRequest.update(
+      {
         label: this.props.desc,
         amount: this.props.amount,
       }
-    })
+    )
     this.state.paymentRequest()
   }
 
