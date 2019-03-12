@@ -16,8 +16,9 @@ class PaymentRequestForm extends React.Component {
       },
     });
 
-    paymentRequest.on('click', (e) => {
-      e.update({
+    paymentRequest.on('click', () => {
+      document.querySelector('body').classList.add('red')
+      paymentRequest.update({
         total: {
           label: this.props.desc,
           amount: this.props.amount,

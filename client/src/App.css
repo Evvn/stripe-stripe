@@ -14,6 +14,10 @@ body {
   margin: 5vw;
 }
 
+red {
+  background-color: blue;
+}
+
 h1 {
   letter-spacing: -5.5px;
   color: #2216af;
