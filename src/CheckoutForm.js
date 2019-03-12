@@ -90,8 +90,8 @@ class CheckoutForm extends React.Component {
         <label>
           Payment Request (if available)
           <PaymentRequestForm
-            amount={ this.state.amount }
-            desc={ this.state.desc }
+            amount=1313
+            desc='hello'
            />
         </label>
       </form>

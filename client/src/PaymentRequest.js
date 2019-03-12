@@ -11,8 +11,8 @@ class PaymentRequestForm extends React.Component {
       country: 'AU',
       currency: 'aud',
       total: {
-        label: 'fail',
-        amount: 100,
+        label: this.props.desc,
+        amount: this.props.amount,
       },
     });
 
@@ -42,24 +42,11 @@ class PaymentRequestForm extends React.Component {
     };
   }
 
-  onClick = (e) => {
-    e.preventDefault()
-    document.querySelector('body').classList.add('red')
-    this.state.paymentRequest.update(
-      {
-        label: this.props.desc,
-        amount: this.props.amount,
-      }
-    )
-    this.state.paymentRequest()
-  }
-
   render() {
     return this.state.canMakePayment ? (
       <PaymentRequestButtonElement
         paymentRequest={this.state.paymentRequest}
         className="PaymentRequestButton"
-        click={ this.onClick }
         style={{
           // For more details on how to style the Payment Request Button, see:
           // https://stripe.com/docs/elements/payment-request-button#styling-the-element
